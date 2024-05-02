@@ -1,0 +1,24 @@
+
+# Checking Networking Ports
+sudo netstat -taupen | grep LISTEN 
+sudo iptables -nvL
+
+netstat -tnlp | grep 80
+netstat -tnlp | grep 3000
+
+# Port Forwarding
+sudo sysctl net.ipv4.ip_forward=1 # Enable port forwarding
+# add a rule that forwards all incoming traffic on 80
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.1.0.5:3000
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE # iptables masquerade
+
+#resolve hostname 
+
+sudo systemctl restart systemd-resolved.service
+sudo systemctl status systemd-resolved.service
+sudo certbot renew
+
+# resolve hostname 2
+sudo hostnamectl set-hostname vm-set-weINEGB6
+
+
