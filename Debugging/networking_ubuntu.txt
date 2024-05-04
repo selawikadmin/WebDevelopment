@@ -6,6 +6,8 @@ sudo iptables -nvL
 netstat -tnlp | grep 80
 netstat -tnlp | grep 3000
 
+sudo ufw disable # disable firewall
+
 # Port Forwarding
 sudo sysctl net.ipv4.ip_forward=1 # Enable port forwarding
 # add a rule that forwards all incoming traffic on 80 -- 127.0.0.1 for react
