@@ -1,3 +1,9 @@
 # unziping files
 yes | sudo tar -xf garmin-webapp-production.tar.gz -C ./
+
+# copy files
 sudo cp /home/omar/garmin-webapp-production.tar.gz ./
+
+# copy files over scp
+ssh -i 
+scp -i v_key.pem  "C:\Users\omarc\Documents_Encrypted\Developer\Web Applications\garmin-webapp\garmin-webapp-production.tar.gz" azureuser@172.171.244.190:~/.
