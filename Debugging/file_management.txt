@@ -1,2 +1,3 @@
 # unziping files
 yes | sudo tar -xf garmin-webapp-production.tar.gz -C ./
+sudo cp /home/omar/garmin-webapp-production.tar.gz ./
