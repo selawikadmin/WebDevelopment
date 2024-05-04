@@ -7,7 +7,7 @@ sudo /opt/certbot/bin/pip install certbot certbot-nginx
 
 sudo ln -s /opt/certbot/bin/certbot /usr/bin/certbot
 
-
+# install certbot via snapd
 yes | sudo apt install snapd
 yes | sudo snap install core; sudo snap refresh core
 yes | sudo snap install --classic certbot
