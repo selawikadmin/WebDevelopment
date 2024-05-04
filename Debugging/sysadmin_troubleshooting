@@ -1,3 +1,12 @@
+# install certbot first
+sudo /opt/certbot/bin/pip install certbot certbot-apache
+sudo /opt/certbot/bin/pip install certbot certbot-apache
+
+sudo /opt/certbot/bin/pip install certbot certbot-nginx
+sudo /opt/certbot/bin/pip install certbot certbot-nginx
+
+sudo ln -s /opt/certbot/bin/certbot /usr/bin/certbot
+
 # unable to resolve hostname
 sudo systemctl restart systemd-resolved.service
 sudo systemctl status systemd-resolved.service
