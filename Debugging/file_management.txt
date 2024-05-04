@@ -1,0 +1,2 @@
+# unziping files
+yes | sudo tar -xf garmin-webapp-production.tar.gz -C ./
