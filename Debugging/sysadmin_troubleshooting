@@ -1,3 +1,4 @@
 
 sudo systemctl restart systemd-resolved.service
 sudo systemctl status systemd-resolved.service
+sudo certbot renew
