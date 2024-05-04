@@ -7,6 +7,12 @@ sudo /opt/certbot/bin/pip install certbot certbot-nginx
 
 sudo ln -s /opt/certbot/bin/certbot /usr/bin/certbot
 
+
+yes | sudo apt install snapd
+yes | sudo snap install core; sudo snap refresh core
+yes | sudo snap install --classic certbot
+yes | sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
 # unable to resolve hostname
 sudo systemctl restart systemd-resolved.service
 sudo systemctl status systemd-resolved.service
